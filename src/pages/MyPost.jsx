@@ -28,7 +28,7 @@ export default function MyPost() {
         </div>
     }
 
-    if (posts.length == 0) {
+    if (posts?.length == 0) {
         return (
             <div className='w-full py-8'>
                 <Container>
