@@ -7,7 +7,7 @@ import store from './store/store.js'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { AddPost, EditPost, Home, Login, MyPost, NotFound, Post, Signup, Verification } from './pages/'
 import AuthLayout from './components/AuthLayout.jsx'
-import { Provider as ChakraProvider } from './components/UI/provider.jsx'
+import { Provider as ChakraProvider } from './components/ui/provider.jsx'
 
 
 const router = createBrowserRouter([
