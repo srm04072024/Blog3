@@ -48,11 +48,11 @@ export default function BlockquoteComponent() {
             </textPath>
           </text>
         </svg>
-        <div className="absolute top-0 left-0 right-0 bottom-0 m-auto w-3/5 h-3/5 bg-blue-800 rounded-full flex items-center justify-center">
+        <div className="absolute top-0 left-0 right-0 bottom-0 m-auto w-3/5 h-3/5  rounded-full flex items-center justify-center bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 ">
           <svg
             fill="#ffffff"
-            width="60%"
-            height="60%"
+            width="65%"
+            height="65%"
             viewBox="0 0 512 512"
             xmlns="http://www.w3.org/2000/svg"
           >

@@ -10,7 +10,7 @@ export default function LandingPage() {
           <div className="space-y-3">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
               Welcome to{" "}
-              <span className=" px-3 py-1 bg-gradient-to-r from-amber-500 via-amber-500 to-lime-500 rounded-lg text-white mr-2 lowercase">
+              <span className=" px-3 py-1 bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 rounded-lg text-white lowercase">
                 Blogger&apos;s
               </span>
               <span className=" bg-clip-text text-transparent bg-gradient-to-r from-amber-500 via-amber-500 to-lime-500 italic">
@@ -26,9 +26,11 @@ export default function LandingPage() {
             <Link to={"/signup"}>
               <Button>Sign Up</Button>
             </Link>
-            <Button textColor="text-white" bgColor="bg-black">
-              Learn More
-            </Button>
+            <Link to={"/login"}>
+              <Button textColor="text-white" bgColor="bg-black">
+                Learn More
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

@@ -99,29 +99,29 @@ export default function Footer() {
           . All Rights Reserved.
         </span>
         <div className="flex mt-4 gap-3 sm:justify-center items-center sm:mt-0">
-          <a target="_blank" href="https://twitter.com/pkmanas22">
+          <a target="_blank" href="#">
             <img
               align="center"
               src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg"
-              alt="pkmanas22"
+              alt="twitter_logo"
               height="20"
               width="20"
             />
           </a>
-          <a target="_blank" href="https://linkedin.com/in/pkmanas22">
+          <a target="_blank" href="#">
             <img
               align="center"
               src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg"
-              alt="pkmanas22"
+              alt="Linkedin_logo"
               height="20"
               width="20"
             />
           </a>
-          <a target="_blank" href="https://instagram.com/pkmanas22">
+          <a target="_blank" href="#">
             <img
               align="center"
               src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg"
-              alt="pkmanas22"
+              alt="instagram_logo"
               height="20"
               width="20"
             />
