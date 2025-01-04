@@ -2,7 +2,7 @@ import { BlockquoteComponent, Login as LoginComponent } from "../components";
 
 export default function Login() {
   return (
-    <div className="w-screen h-full pt-20 p-10 grid md:grid-cols-2 gap-5">
+    <div className="w-screen h-full pt-20 p-10 grid md:grid-cols-2 gap-5 shadow-md">
       <div className="flex justify-center items-center mx-auto w-full">
         <LoginComponent />
       </div>
