@@ -44,24 +44,6 @@ export default function Footer() {
               <li>
                 <a
                   target="_blank"
-                  href="https://github.com/pkmanas22"
-                  className="hover:underline "
-                >
-                  Github
-                </a>
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  href="https://twitter.com/pkmanas22"
-                  className="hover:underline"
-                >
-                  Twitter
-                </a>
-              </li>
-              <li>
-                <a
-                  target="_blank"
                   href="https://linkedin.com/in/maharanasoumyaranjan"
                   className="hover:underline "
                 >
@@ -71,10 +53,19 @@ export default function Footer() {
               <li>
                 <a
                   target="_blank"
-                  href="https://www.leetcode.com/pkmanas22"
+                  href="https://linkedin.com/in/maharanasoumyaranjan"
                   className="hover:underline "
                 >
-                  Leetcode
+                  Umesh
+                </a>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://linkedin.com/in/maharanasoumyaranjan"
+                  className="hover:underline "
+                >
+                  Sankarshan
                 </a>
               </li>
             </ul>
@@ -98,7 +89,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <hr className="my-6 border-gray-200 w-full mx-auto lg:my-8" />
+      <hr className="my-4 border-gray-200 w-full mx-auto" />
       <div className="sm:flex sm:items-center sm:justify-between">
         <span className="text-sm text-gray-500 sm:text-center">
           &copy; 2024{" "}
@@ -130,15 +121,6 @@ export default function Footer() {
             <img
               align="center"
               src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg"
-              alt="pkmanas22"
-              height="20"
-              width="20"
-            />
-          </a>
-          <a target="_blank" href="https://www.leetcode.com/pkmanas22">
-            <img
-              align="center"
-              src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg"
               alt="pkmanas22"
               height="20"
               width="20"
