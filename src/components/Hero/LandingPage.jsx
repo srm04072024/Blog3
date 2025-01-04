@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function LandingPage() {
   return (
-    <section className=" w-[full] py-28 lg:py-28 xl:py-36 shadow-md">
+    <section className=" w-[full] py-28 lg:py-28 xl:py-36 shadow-md mt-16">
       <div className=" px-4 md:px-6">
         <div className="flex flex-col items-center space-y-6 justify-center">
           <div className="space-y-3">
@@ -14,7 +14,7 @@ export default function LandingPage() {
                 Blogger&apos;s
               </span>
               <span className=" bg-clip-text text-transparent bg-gradient-to-r from-amber-500 via-amber-500 to-lime-500 italic">
-                Blog
+                Point
               </span>
             </h1>
             <p className="mx-auto max-w-[700px] text-gray-600 md:text-2xl text-center">
