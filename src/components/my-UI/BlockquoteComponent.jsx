@@ -6,8 +6,8 @@ export default function BlockquoteComponent() {
       <div className="relative">
         <svg
           viewBox="0 0 200 200"
-          width="full"
-          height="full"
+          width="100%"
+          height="100%"
           // className="text-lg tracking-widest animate-spin animatedButton"
           className=" text-sm tracking-widest animate-spin"
           style={{ animationDuration: "5000ms" }}

@@ -1,35 +1,38 @@
-import { useEffect, useState } from 'react'
-import { Footer, Header } from './components'
-import authService from './appwrite/auth';
-import { useDispatch } from 'react-redux';
-import { login, logout } from './store/authSlice';
-import { Outlet } from 'react-router-dom';
+import { useEffect, useState } from "react";
+import { Footer, Header } from "./components";
+import authService from "./appwrite/auth";
+import { useDispatch } from "react-redux";
+import { login, logout } from "./store/authSlice";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    authService.getCurrentUser()
+    authService
+      .getCurrentUser()
       .then((userData) => {
         if (userData) {
-          dispatch(login(userData))
+          dispatch(login(userData));
         } else {
-          dispatch(logout())
+          dispatch(logout());
         }
       })
-      .finally(() => setLoading(false))
-  }, [])
+      .finally(() => setLoading(false));
+  }, []);
 
-  return !loading ? (<div className='min-h-screen flex flex-wrap content-between bg-white'>
-    <div className='w-full block'>
-      <Header />
-      <main>
-        <Outlet />
-      </main>
-      <Footer />
+  return !loading ? (
+    <div className="min-h-screen flex flex-wrap content-between ">
+      <div className="w-full block">
+        <Header />
+        <main className="">
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
     </div>
-  </div>) : null
+  ) : null;
 }
 
-export default App
+export default App;
