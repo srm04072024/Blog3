@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .dark {
-  @apply bg-black text-slate-400;
+  @apply bg-gray-800 text-slate-400;
 }
 
 .light {

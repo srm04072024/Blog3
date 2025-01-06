@@ -38,7 +38,7 @@ export default function Login() {
   return (
     <div className="flex items-center justify-center m-auto sm:w-full">
       <div
-        className={`w-full max-w-lg bg-gray-100 rounded-xl border border-black/10 p-10`}
+        className={`w-full max-w-lg shadow-lg shadow-slate-600 rounded-xl border border-black/10 p-10`}
       >
         <div className="text-center">
           Welcome blogger
