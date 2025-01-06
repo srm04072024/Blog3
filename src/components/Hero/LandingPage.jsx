@@ -11,7 +11,7 @@ export default function LandingPage() {
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
               Welcome to{" "}
               <span className=" px-3 py-1 bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 rounded-lg text-white lowercase">
-                Blogger&apos;s
+                Bloggers
               </span>
               <span className=" bg-clip-text text-transparent bg-gradient-to-r from-amber-500 via-amber-500 to-lime-500 italic">
                 Point
@@ -24,10 +24,15 @@ export default function LandingPage() {
           </div>
           <div className="space-x-4">
             <Link to={"/signup"}>
-              <Button>Sign Up</Button>
+              <Button className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 uppercase text-white font-bold">
+                Sign Up
+              </Button>
             </Link>
             <Link to={"/login"}>
-              <Button textColor="text-white" bgColor="bg-black">
+              <Button
+                textColor="text-white"
+                className=" bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%  text-white font-bold"
+              >
                 Learn More
               </Button>
             </Link>
