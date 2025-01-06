@@ -1,9 +1,11 @@
-import { Container, Logo } from "..";
+import { Button, Container, Logo } from "..";
 import { useDispatch, useSelector } from "react-redux";
 import authService from "../../appwrite/auth";
 import { logout } from "../../store/authSlice";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { FaMoon, FaSun } from "react-icons/fa";
+import { toggleTheme } from "../../store/themeSlice";
 
 export default function Header() {
   const authStatus = useSelector((state) => state.auth.status); // there is auth in store's reducer and it has status
@@ -15,8 +17,12 @@ export default function Header() {
   const navigate = useNavigate();
 
   const user = useSelector((state) => state.auth.userData);
-
-  // console.log(user)
+  const { theme } = useSelector((state) => state.theme);
+  // console.log(theme);
+  const handleToggle = () => {
+    dispatch(toggleTheme());
+    // document.documentElement.classList.toggle("dark", theme === "light");
+  };
 
   const navItems = [
     {
@@ -77,8 +83,8 @@ export default function Header() {
 
   return (
     <Container>
-      <nav className=" bg-slate-100 border-gray-200 border-b-2 fixed z-[1000] top-0 left-0 w-full px-2 lg:px-6 ">
-        <div className=" max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <nav className=" flex items-center gap-2 bg-slate-100 border-gray-200 border-b-2 fixed z-[1000] top-0 left-0 w-full px-2 lg:px-6">
+        <div className="flex-1 max-w-screen-xl flex flex-wrap items-center justify-between  mx-auto p-4">
           {/* Menu toggle button */}
           <button
             onClick={toggleMenu}
@@ -173,6 +179,14 @@ export default function Header() {
             </ul>
           </div>
         </div>
+        <span className="mr-2">
+          <button
+            className=" rounded-full text-black  text-2xl"
+            onClick={handleToggle}
+          >
+            {theme === "dark" ? <FaMoon /> : <FaSun />}
+          </button>
+        </span>
       </nav>
     </Container>
   );

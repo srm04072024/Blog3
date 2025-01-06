@@ -4,6 +4,7 @@ import authService from "./appwrite/auth";
 import { useDispatch } from "react-redux";
 import { login, logout } from "./store/authSlice";
 import { Outlet } from "react-router-dom";
+// import ThemeProvider from "./components/my-UI/themeProvider";
 
 function App() {
   const [loading, setLoading] = useState(true);

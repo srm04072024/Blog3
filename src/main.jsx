@@ -1,23 +1,33 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import { Provider } from 'react-redux'
-import store from './store/store.js'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { AddPost, EditPost, Home, Login, MyPost, NotFound, Post, Signup, Verification } from './pages/'
-import AuthLayout from './components/AuthLayout.jsx'
-import { Provider as ChakraProvider } from './components/ui/provider.jsx'
-
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App.jsx";
+import "./index.css";
+import { Provider } from "react-redux";
+import store from "./store/store.js";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  AddPost,
+  EditPost,
+  Home,
+  Login,
+  MyPost,
+  NotFound,
+  Post,
+  Signup,
+  Verification,
+} from "./pages/";
+import AuthLayout from "./components/AuthLayout.jsx";
+import { Provider as ChakraProvider } from "./components/ui/provider.jsx";
+import ThemeProvider from "./components/my-UI/themeProvider.jsx";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <App />,
     // errorElement: <NotFound />,
     children: [
       {
-        path: '/',
+        path: "/",
         element: <Home />,
       },
       {
@@ -26,7 +36,7 @@ const router = createBrowserRouter([
           <AuthLayout authentication={false}>
             <Login />
           </AuthLayout>
-        )
+        ),
       },
       {
         path: "/signup",
@@ -34,7 +44,7 @@ const router = createBrowserRouter([
           <AuthLayout authentication={false}>
             <Signup />
           </AuthLayout>
-        )
+        ),
       },
       {
         path: "/verification",
@@ -42,7 +52,7 @@ const router = createBrowserRouter([
           <AuthLayout authentication={false}>
             <Verification />
           </AuthLayout>
-        )
+        ),
       },
       {
         path: "/my-posts",
@@ -50,7 +60,7 @@ const router = createBrowserRouter([
           <AuthLayout authentication={true}>
             <MyPost />
           </AuthLayout>
-        )
+        ),
       },
       {
         path: "/add-post",
@@ -58,7 +68,7 @@ const router = createBrowserRouter([
           <AuthLayout authentication>
             <AddPost />
           </AuthLayout>
-        )
+        ),
       },
       {
         path: "/edit-post/:slug",
@@ -66,22 +76,24 @@ const router = createBrowserRouter([
           <AuthLayout authentication>
             <EditPost />
           </AuthLayout>
-        )
+        ),
       },
       {
         path: "/post/:slug",
-        element: <Post />
+        element: <Post />,
       },
-    ]
-  }
-])
+    ],
+  },
+]);
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
     <ChakraProvider>
-      <Provider store={store} >
-        <RouterProvider router={router} />
+      <Provider store={store}>
+        <ThemeProvider>
+          <RouterProvider router={router} />
+        </ThemeProvider>
       </Provider>
     </ChakraProvider>
-  </StrictMode>,
-)
+  </StrictMode>
+);
